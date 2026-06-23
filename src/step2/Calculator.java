@@ -30,4 +30,7 @@ public class Calculator {
         return results;
    }
 
+   public void removeResults() {
+       results.remove( 0 );
+   }
 }
