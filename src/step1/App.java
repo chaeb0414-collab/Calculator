@@ -14,13 +14,13 @@ public class App {
             int num1 = sc.nextInt();
             if (num1 < 0) {
                 System.out.println("0을 포함한 양의 정수만 입력 가능합니다.");
-                return;
+                continue;
             }
             System.out.println("두 번째 숫자를 입력하세요: ");
             int num2 = sc.nextInt();
             if (num2 < 0) {
                 System.out.println("0을 포함한 양의 정수만 입력 가능합니다.");
-                return;
+                continue;
             }
             // 사칙연산 기호(+,-,*,/) 입력받기
             System.out.println("사칙연산 기호를 입력하세요: ");
@@ -35,13 +35,13 @@ public class App {
                 case '/' -> {
                     if (num2 == 0) {
                         System.out.println("0으로 나눌 수 없습니다.");
-                        return;
+                        continue;
                     }
                     result = num1 / num2;
                 }
                 default -> {
                     System.out.println("지원하지 않는 연산자 입니다.");
-                    return;
+                    continue;
                 }
             }
             System.out.println("결과: " + result);
