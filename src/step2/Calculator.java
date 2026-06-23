@@ -1,6 +1,7 @@
 package step2;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Calculator {
 
@@ -10,16 +11,19 @@ public class Calculator {
 
         int result;
 
-        switch (ch) {
+        switch (operator) {
             case '+' -> result = num1 + num2;
             case '-' -> result = num1 - num2;
             case '*' -> result = num1 * num2;
             case '/' -> {
+                if(num2 == 0){
                 throw new ArithmeticException("0으로 나눌 수 없습니다.");
-                result = num1 / num2;
             }
-            default -> throw new IllegalArgumentException("지원하지 않는 연산자 입니다.");
+            result = num1 / num2;
         }
-        return result;
+        default -> throw new IllegalArgumentException("지원하지 않는 연산자 입니다.");
     }
+        results.add(result);
+        return result;
+   }
 }
